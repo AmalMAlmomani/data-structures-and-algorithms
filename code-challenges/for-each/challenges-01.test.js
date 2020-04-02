@@ -12,7 +12,6 @@ const greeting = (word) => {
   // Solution code here...
   return word.toUpperCase();
 };
-
 const speaker = (message, callback) => {
   // Solution code here...
   return callback(message);
@@ -65,7 +64,6 @@ const removeOne = (num, arr) => {
       arr.pop();
   }
 };
-
 const removeElements = (arr, callback) => {
   // Solution code here...
   for (let i = 0 ; i< arr.length ; i++){
@@ -84,7 +82,6 @@ const removeWithForEach = (arr, callback) => {
   // Solution code here...
   arr.forEach(value => {
       callback(value,arr);
-   
   });
   return arr;
 };
