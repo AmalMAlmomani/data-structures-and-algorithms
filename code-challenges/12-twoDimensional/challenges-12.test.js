@@ -149,6 +149,20 @@ const weeklyTemperatures = [
 
 const averageDailyTemperature = (weather) => {
     // Solution code here...
+    let x = weather.map((item, idx) => {
+        let sum = 0;
+        for (let i = 0; i < item.length; i++) {
+          sum = sum + item[i];
+        }
+        return sum
+      });
+    
+      let sum2 = x.reduce((acc, val, idx) => {
+        acc = acc + val
+        return acc
+      })
+    
+      return (sum2 / (weather.length * 7))
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -170,6 +184,20 @@ let lowestWeeklyTemperatureData = [
 
 const lowestWeeklyAverage = (weather) => {
     // Solution code here...
+    let sumArr = weather.map((item, idx) => {
+        let sum = 0;
+        for (let i = 0; i < item.length; i++) {
+          sum = sum + item[i];
+        }
+        return sum
+      });
+    
+      let avgArr = sumArr.map(item => item / 7);
+    
+    
+      let sorted = avgArr.sort((a, b) => a - b);
+    
+      return sorted[0];
 };
 
 /* ------------------------------------------------------------------------------------------------
